@@ -59,9 +59,7 @@ Variables
 Global Styles
 ===============
 */
-#countdown{
-  text-align: center;
-}
+
 a{
   font-size:50px;
   color:rgb(22, 11, 81);
@@ -258,7 +256,7 @@ nav {
   color: var(--clr-secondary);
 }
 .logo {
-  height: 50px;
+  height: 200px;
 }
 .links-container {
   height: 0;
@@ -357,10 +355,12 @@ header {
 .title span {
   color: var(--clr-secondary);
 }
-#about,
+#about{
+  height: 70vh;
+}
 #services,
 #tours {
-  height: 80vh;
+  height: 105vh;
 }
 #services {
   background: var(--clr-white);
