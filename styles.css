@@ -59,7 +59,17 @@ Variables
 Global Styles
 ===============
 */
-
+.row {
+  outline: 6px double #1C6EA4;
+  outline-offset: 3px;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: right;
+  margin-left:auto;
+  margin-right: auto;
+  max-width: 10%;
+  height: auto;
+}
 a{
   font-size:50px;
   color:rgb(22, 11, 81);
@@ -70,14 +80,7 @@ p{
   font-size:large;
   font-weight:bold;
 }
-.wishlist{
-  display:grid;
-  color:black;
-  text-align: center;
-  font-size: larger;
-  font-weight: bold;
-  font-family: Helvetica;
-}
+
 h4{
   text-align:center;
 }
@@ -154,6 +157,7 @@ p {
   body {
     font-size: 1rem;
   }
+  ul,
   h1,
   h2,
   h3,
@@ -211,6 +215,7 @@ main {
   display: grid;
   place-items: center;
 }
+
 /*
 =============== 
 Scroll
@@ -264,7 +269,7 @@ nav {
   transition: var(--transition);
 }
 .show-links {
-  height: 200px;
+  height: 100px;
 }
 .links a {
   background: var(--clr-white);
@@ -283,6 +288,10 @@ nav {
 @media screen and (min-width: 800px) {
   nav {
     background: transparent;
+  }
+  .wishlist{
+    display:flexbox;
+    text-align:center;
   }
   .nav-center {
     width: 90vw;
@@ -310,7 +319,7 @@ nav {
     font-size: 1.1rem;
     text-transform: capitalize;
     letter-spacing: var(--spacing);
-    display: block;
+    display: flex;
     transition: var(--transition);
     margin: 0 1rem;
     font-weight: bold;
@@ -319,6 +328,7 @@ nav {
   .links a:hover {
     color: var(--clr-white);
   }
+
 }
 /* hero */
 header {
@@ -347,6 +357,7 @@ header {
     max-width: 40rem;
   }
 }
+
 /* sections and title */
 .title h2 {
   text-align: center;
@@ -358,9 +369,11 @@ header {
 #about{
   height: 70vh;
 }
-#services,
+#services {
+  height: 60vh
+}
 #tours {
-  height: 105vh;
+  height: 155vh;
 }
 #services {
   background: var(--clr-white);
@@ -368,6 +381,7 @@ header {
 footer {
   background: var(--clr-grey-1);
   padding: 5rem 1rem;
+  display:grid;
 }
 footer p {
   color: var(--clr-white);
@@ -375,6 +389,7 @@ footer p {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   margin-bottom: 0;
+  display:grid;
 }
 
 .top-link {
@@ -390,7 +405,7 @@ footer p {
   border-radius: var(--radius);
   color: var(--clr-white);
   animation: bounce 2s ease-in-out infinite;
-  visibility: hidden;
+  visibility:hidden;
   z-index: -100;
 }
 .show-link {
